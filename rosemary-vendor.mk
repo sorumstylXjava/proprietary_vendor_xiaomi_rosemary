@@ -158,6 +158,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rosemary/proprietary/vendor/etc/camera/sr_params.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/sr_params.xml \
     vendor/xiaomi/rosemary/proprietary/vendor/etc/camera/vidhance_calibration:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vidhance_calibration \
     vendor/xiaomi/rosemary/proprietary/vendor/etc/default_pd_calibration.bin:$(TARGET_COPY_OUT_VENDOR)/etc/default_pd_calibration.bin \
+    vendor/xiaomi/rosemary/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     vendor/xiaomi/rosemary/proprietary/vendor/etc/dsi_panel_k7_38_0c_0a_fhdp_video_mi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dsi_panel_k7_38_0c_0a_fhdp_video_mi.xml \
     vendor/xiaomi/rosemary/proprietary/vendor/etc/dsi_panel_k7_44_06_0b_fhdp_video_mi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dsi_panel_k7_44_06_0b_fhdp_video_mi.xml \
     vendor/xiaomi/rosemary/proprietary/vendor/etc/dsi_panel_k7_44_0e_0b_fhdp_video_mi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dsi_panel_k7_44_0e_0b_fhdp_video_mi.xml \
@@ -228,6 +229,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rosemary/proprietary/vendor/etc/init/networksetting.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/networksetting.rc \
     vendor/xiaomi/rosemary/proprietary/vendor/etc/init/nvram_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nvram_daemon.rc \
     vendor/xiaomi/rosemary/proprietary/vendor/etc/init/tetheroffloadservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tetheroffloadservice.rc \
+    vendor/xiaomi/rosemary/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
     vendor/xiaomi/rosemary/proprietary/vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc \
     vendor/xiaomi/rosemary/proprietary/vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc \
     vendor/xiaomi/rosemary/proprietary/vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc \
@@ -572,6 +574,8 @@ PRODUCT_PACKAGES += \
     libcmdl \
     libcmdl_ndk.mtk.vndk \
     libcustom_nvram \
+    libdapparamstorage \
+    libdeccfg \
     libdynamiclog \
     libfile_op \
     libhdrvideo \
@@ -604,6 +608,8 @@ PRODUCT_PACKAGES += \
     libwapi \
     meta_wifi_data \
     libmtk_drvb \
+    libswdap \
+    vendor.dolby.hardware.dms@2.0 \
     vendor.mediatek.hardware.apmonitor@2.0 \
     vendor.mediatek.hardware.apuware.utils@2.0 \
     vendor.mediatek.hardware.nvram@1.0 \
@@ -1300,6 +1306,7 @@ PRODUCT_PACKAGES += \
     libdip_drv \
     libdip_imem \
     libdip_postproc \
+    libdlbdsservice \
     libdre \
     libeffecthal.base \
     libfeature.face \
@@ -1507,6 +1514,7 @@ PRODUCT_PACKAGES += \
     ov64b40semco_mipi_raw_india_IdxMgr \
     ov64b40semco_mipi_raw_india_tuning \
     ov64b40semco_mipi_raw_tuning \
+    vendor.dolby.hardware.dms@2.0-impl \
     vendor.mediatek.hardware.apuware.xrp@1.0 \
     vendor.mediatek.hardware.camera.atms@1.0 \
     vendor.mediatek.hardware.camera.bgservice@1.0 \
@@ -1587,6 +1595,7 @@ PRODUCT_PACKAGES += \
     manifest_android.hardware.drm@1.4-service.widevine.xml \
     manifest_hwcomposer.xml \
     manifest_media_c2_V1_2_default.xml \
+    manifest_vendor.dolby.hardware.dms.xml \
     SoterProvisioningTool \
     batterysecret \
     bip \
@@ -1608,6 +1617,7 @@ PRODUCT_PACKAGES += \
     camerahalserver \
     mtkfusionrild \
     tetheroffloadservice \
+    vendor.dolby.hardware.dms@2.0-service \
     vendor.mediatek.hardware.keymaster_attestation@1.1-service \
     vendor.mediatek.hardware.mmagent@1.1-service \
     vendor.mediatek.hardware.mms@1.6-service \
